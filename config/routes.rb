@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root to: 'homes#top'
   root 'post_images#index'
   devise_for :users
@@ -10,5 +11,7 @@ Rails.application.routes.draw do
 
 
   end
+
+  resources :users, only: [:show, :edit, :update]
 
 end
